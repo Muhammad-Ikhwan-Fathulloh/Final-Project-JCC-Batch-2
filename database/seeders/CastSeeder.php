@@ -17,19 +17,16 @@ class CastSeeder extends Seeder
     {
         DB::table('casts')->insert([
             [
-                'cast_id' => '1',
                 'name' => 'Ikhwan',
                 'age' => '20',
                 'bio' => 'lorem ipsum sir dolor amet',
             ],
             [
-                'cast_id' => '2',
                 'name' => 'Aldi',
                 'age' => '20',
                 'bio' => 'lorem ipsum sir dolor amet',
             ],
             [
-                'cast_id' => '3',
                 'name' => 'Dimas',
                 'age' => '20',
                 'bio' => 'lorem ipsum sir dolor amet',
