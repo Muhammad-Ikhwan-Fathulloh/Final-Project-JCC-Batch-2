@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id('profile_id');
-            $table->bigInteger('id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('age');
             $table->text('bio');
             $table->text('address');
-            $table->foreign('id')
+            $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
 

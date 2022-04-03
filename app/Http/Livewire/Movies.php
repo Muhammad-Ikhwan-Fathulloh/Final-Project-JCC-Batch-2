@@ -48,10 +48,10 @@ class Movies extends Component
 
     public function createCritic($movie_id){
         $critics = [
-            'id' => Auth::user()->id,
-            'movie_id' => intval($movie_id),
+            'user_id' => Auth::user()->id,
+            'movie_id' => $movie_id,
             'content' => $this->content,
-            'point' => intval($this->point),
+            'point' => $this->point,
         ];
 
         DB::beginTransaction();
@@ -208,7 +208,7 @@ class Movies extends Component
             ->where('movies.title','LIKE',"%".$this->search."%")
             ->paginate(4),
             'critics' => DB::table('critics')
-            ->leftJoin('users','users.id','=','critics.id')
+            ->leftJoin('users','users.id','=','critics.user_id')
             ->get(),
         ]);
     }

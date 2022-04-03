@@ -38,7 +38,7 @@ class Critics extends Component
 
     public function create(){
         $critics = [
-            'id' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'movie_id' => $this->movie_id,
             'content' => $this->content,
             'point' => $this->point,
@@ -88,7 +88,7 @@ class Critics extends Component
         ]);
 
         $critics = [
-            'id' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'movie_id' => $this->movie_id,
             'content' => $this->content,
             'point' => $this->point,
@@ -134,7 +134,7 @@ class Critics extends Component
     {
         return view('livewire.critics', [
             'critics' => DB::table('critics')
-            ->leftJoin('users','users.id','=','critics.id')
+            ->leftJoin('users','users.id','=','critics.user_id')
             ->where('critics.point','LIKE',"%".$this->search."%")
             ->paginate(5),
         ]);

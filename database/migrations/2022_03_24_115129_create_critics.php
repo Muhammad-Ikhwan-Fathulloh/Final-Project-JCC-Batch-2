@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('critics', function (Blueprint $table) {
             $table->id('critic_id');
-            $table->bigInteger('id')->unsigned();
-            $table->bigInteger('movie_id')->unsigned();
+            $table->bigInteger('user_id');
+            $table->bigInteger('movie_id');
             $table->text('content');
             $table->bigInteger('point');
 
