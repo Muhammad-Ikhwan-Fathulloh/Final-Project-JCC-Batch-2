@@ -27,10 +27,10 @@
 
 <hr>
 
-<strong>Link Demo : </strong>
+<strong>Link Demo : https://youtu.be/b09a7pSkZnE</strong>
 
 ### Link Deploy
 
 <hr>
 
-<strong>Link Deploy : </strong>
+<strong>Link Deploy : https://movie-review-jcc.herokuapp.com/</strong>
